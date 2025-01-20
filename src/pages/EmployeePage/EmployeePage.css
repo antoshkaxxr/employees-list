@@ -1,0 +1,73 @@
+/* EmployeePage.css */
+
+.employee-data {
+    margin-top: 16px;
+    padding-left: 180px;
+    display: flex;
+    align-items: flex-start;
+    gap: 42px;
+}
+
+.employee-photo {
+    width: 163px;
+    height: 163px;
+    border-radius: 50%;
+}
+
+.employee-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.employee-name {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.employee-position {
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 16px;
+}
+
+.employee-competencies {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.employee-main-info {
+    margin-top: 80px;
+    padding-left: 180px;
+}
+
+.main-info-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.main-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.main-info-item {
+    display: flex;
+    align-items: flex-start;
+}
+
+.main-info-label {
+    font-size: 24px;
+    font-weight: 500;
+    text-align: left;
+    min-width: 292px;
+}
+
+.main-info-value {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: left;
+    flex: 1;
+}

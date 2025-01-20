@@ -1,0 +1,11 @@
+.path-container {
+    padding: 28px 180px;
+    display: flex;
+    gap: 16px;
+}
+
+.path-part {
+    font-size: 18px;
+    font-weight: 500;
+    color: #B0B0B0;
+}
