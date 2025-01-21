@@ -1,0 +1,12 @@
+.competence {
+    background: #F2F2F2;
+    padding: 10px 22px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .competence {
+        font-size: 12px;
+        padding: 10px 17px;
+    }
+}

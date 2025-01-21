@@ -1,7 +1,10 @@
+import React, { useState, useEffect } from 'react';
+import { throttle } from 'lodash';
 import './EmployeePage.css';
 import { PagesPath } from "../../components/PagesPath/PagesPath";
 import { Employee1 } from "../../mocks/EmployeeMocks";
-import { Competence } from "../../components/UI-kit/Competence/Competence";
+import { Competences } from "../../components/UI-kit/Competences/Competences";
+import {Header} from "../../components/Header/Header";
 
 const formatPhoneNumber = (phone: string) => {
     return phone.replace(/[()]/g, '');
@@ -44,6 +47,20 @@ const formatDate = (dateString: string): string => {
 };
 
 export function EmployeePage() {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = throttle(() => {
+            setWindowWidth(window.innerWidth);
+        }, 200);
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return (
         <>
             <PagesPath employeeName={Employee1.name} />
@@ -56,16 +73,11 @@ export function EmployeePage() {
                 <div className={'employee-info'}>
                     <div className={'employee-name'}>{Employee1.name}</div>
                     <div className={'employee-position'}>{Employee1.position}</div>
-                    <div className={'employee-competencies'}>
-                        {Employee1.stack.map((competence, index) => (
-                            <Competence
-                                key={`competence-${index}`}
-                                competenceName={competence}
-                            />
-                        ))}
-                    </div>
+                    {windowWidth > 768 && <Competences stack={Employee1.stack} />}
                 </div>
             </div>
+            {windowWidth <= 768 && <Competences stack={Employee1.stack} />}
+            <hr className={'divider'} />
             <div className={'employee-main-info'}>
                 <div className={'main-info-title'}>
                     Основная информация

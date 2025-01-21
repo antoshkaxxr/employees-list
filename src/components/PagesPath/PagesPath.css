@@ -1,11 +1,49 @@
 .path-container {
-    padding: 28px 180px;
+    padding: 28px 0 28px 180px;
     display: flex;
     gap: 16px;
+    white-space: nowrap;
 }
 
 .path-part {
     font-size: 18px;
     font-weight: 500;
     color: #B0B0B0;
+}
+
+.chevron-right {
+    width: 16px;
+    height: 16px;
+    color: #B0B0B0;
+}
+
+.path-employee-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .path-container > .path-part:first-child,
+    .path-container > span:nth-child(2) {
+        display: none;
+    }
+
+    .path-container {
+        padding: 15px 0 15px 24px;
+        gap: 12px;
+    }
+
+    .path-part {
+        font-size: 14px;
+    }
+
+    .chevron-right {
+        width: 12px;
+        height: 12px;
+    }
+
+    .path-employee-name {
+        max-width: 100%;
+    }
 }

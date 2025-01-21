@@ -1,8 +1,8 @@
-type Gender = 'Женщина' | 'Мужчина';
+export type Gender = 'Женщина' | 'Мужчина';
 
-type Position = 'Фронтендер' | 'Бэкендер' | 'Аналитик' | 'Менеджер' | 'Дизайнер';
+export type Position = 'Фронтендер' | 'Бэкендер' | 'Аналитик' | 'Менеджер' | 'Дизайнер';
 
-type Stack = 'CSharp' | 'React' | 'Java' | 'PHP' | 'Figma' | 'Word';
+export type Stack = 'CSharp' | 'React' | 'Java' | 'PHP' | 'Figma' | 'Word';
 
 export type EmployeeInfo = {
     id: number;

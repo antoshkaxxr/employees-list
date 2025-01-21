@@ -1,0 +1,19 @@
+.switch {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.switch img {
+    transition: opacity 0.2s ease;
+}
+
+.switch:hover img {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .switch img {
+        width: 47px;
+        height: 22px;
+    }
+}
