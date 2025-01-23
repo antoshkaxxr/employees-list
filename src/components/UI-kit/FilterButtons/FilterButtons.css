@@ -1,0 +1,21 @@
+.filter-buttons {
+    display: flex;
+    gap: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.filter-buttons select:hover {
+    background-color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+    .filter-buttons {
+        gap: 0;
+    }
+
+    .filter-buttons .custom-select:nth-child(3) .select-options {
+        right: 0;
+        left: auto;
+    }
+}

@@ -1,18 +1,17 @@
-import React, { useState } from 'react';
 import './Switch.css';
+import {useDispatch, useSelector} from "react-redux";
+import {RootState} from "../../../store/store";
+import {toggleTheme} from "../../../store/themeSlice";
 
 export function Switch() {
-    const [isOn, setIsOn] = useState(false);
-
-    const toggleSwitch = () => {
-        setIsOn(!isOn);
-    };
+    const dispatch = useDispatch();
+    const isDarkTheme = useSelector((state: RootState) => state.theme.isDarkTheme);
 
     return (
-        <div className="switch" onClick={toggleSwitch}>
+        <div className="switch" onClick={() => dispatch(toggleTheme())}>
             <img
-                src={isOn ? '/assets/dark-switch.svg' : '/assets/light-switch.svg'}
-                alt={isOn ? 'Switch On' : 'Switch Off'}
+                src={isDarkTheme ? '/assets/dark-switch.svg' : '/assets/light-switch.svg'}
+                alt={isDarkTheme ? 'Dark Mode' : 'Light Mode'}
             />
         </div>
     );

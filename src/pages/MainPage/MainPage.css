@@ -1,0 +1,136 @@
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 180px;
+    padding-right: 180px;
+}
+
+.header-section h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.search-section {
+    display: flex;
+    padding-left: 180px;
+    padding-right: 180px;
+}
+
+.search-section input {
+    padding: 10px;
+    border: 1px solid #B0B0B0;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #B0B0B0;
+    width: 100%;
+}
+
+.filters-section {
+    padding: 16px 180px;
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #F2F2F2;
+}
+
+.filters-section span {
+    font-size: 20px;
+    font-weight: 500;
+    color: #666;
+    margin-right: 40px;
+}
+
+.selected-filters {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.filter-tag {
+    display: inline-flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #292929;
+    gap: 15px;
+    padding: 10px 10px;
+}
+
+.cancel-button img {
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}
+
+.loading-info {
+    padding: 20px 0 20px 180px;
+}
+
+.filters-section button {
+    padding: 12px 48px;
+    border: none;
+    border-radius: 8px;
+    background-color: #155DA4;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: auto;
+    color: #FFFFFF;
+}
+
+.filters-section button:hover {
+    background-color: #5497da;
+}
+
+@media (max-width: 768px) {
+    .header-section {
+        padding-left: 24px;
+        padding-right: 0;
+    }
+
+    .header-section h1 {
+        font-size: 20px;
+    }
+
+    .search-section {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .search-section input {
+        font-size: 12px;
+    }
+
+    .filters-section {
+        display: block;
+        margin-top: 16px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .filters-section span {
+        font-size: 14px;
+    }
+
+    .filters-section button {
+        width: 100%;
+        font-size: 12px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        border-radius: 4px;
+    }
+
+    .filter-tag {
+        font-size: 12px;
+        margin-top: 6px;
+    }
+
+    .loading-info {
+        padding: 10px 0 10px 24px;
+        font-size: 10px;
+    }
+}
