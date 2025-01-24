@@ -9,6 +9,7 @@ import { setSearchQuery, setSelectedFilters } from '../../store/filtersSlice';
 import { mapFunction } from "../../utils/mapFunction";
 import { FilterButtons } from "../../components/UI-kit/FilterButtons/FilterButtons";
 import { useWindowWidth } from "../../hooks/useWindowWidth";
+import {Helmet} from "react-helmet-async";
 
 export function MainPage() {
     const dispatch = useDispatch<AppDispatch>();
@@ -76,6 +77,9 @@ export function MainPage() {
 
     return (
         <div className="main-page-container">
+            <Helmet>
+                <title>Список сотрудников - 66 Бит</title>
+            </Helmet>
             <PagesPath />
             <div className="header-section">
                 <h1>Список сотрудников</h1>

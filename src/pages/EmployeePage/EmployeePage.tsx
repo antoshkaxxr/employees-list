@@ -8,6 +8,7 @@ import { formatDate, formatPhoneNumber } from '../../utils/FormatFunctions';
 import { fetchEmployeeDetails } from '../../store/employeeDetailsSlice';
 import { RootState, AppDispatch } from '../../store/store';
 import { useWindowWidth } from '../../hooks/useWindowWidth';
+import {Helmet} from "react-helmet-async";
 
 export function EmployeePage() {
     const { id } = useParams<{ id: string }>();
@@ -35,6 +36,9 @@ export function EmployeePage() {
 
     return (
         <>
+            <Helmet>
+                <title>{employee.name} - 66 Бит</title>
+            </Helmet>
             <PagesPath employeeName={employee.name} />
             <div className="employee-data">
                 <img
