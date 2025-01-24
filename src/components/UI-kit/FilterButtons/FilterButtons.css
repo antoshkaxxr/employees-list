@@ -10,10 +10,6 @@
 }
 
 @media (max-width: 768px) {
-    .filter-buttons {
-        gap: 0;
-    }
-
     .filter-buttons .custom-select:nth-child(3) .select-options {
         right: 0;
         left: auto;

@@ -24,11 +24,6 @@
 }
 
 @media (max-width: 768px) {
-    .path-container > .path-part:first-child,
-    .path-container > span:nth-child(2) {
-        display: none;
-    }
-
     .path-container {
         padding: 15px 0 15px 24px;
         gap: 12px;
@@ -44,6 +39,6 @@
     }
 
     .path-employee-name {
-        max-width: 100%;
+        padding-right: 24px;
     }
 }
